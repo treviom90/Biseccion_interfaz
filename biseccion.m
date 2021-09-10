@@ -75,6 +75,7 @@ function validar_error (hObject, ~)
 end
 
 function encontrar_raiz(~, ~)
+  pkg load symbolic;
   syms x;
   e_aprox=100;
   xactual=1;
@@ -96,7 +97,7 @@ function encontrar_raiz(~, ~)
           '\n No se ingreso el intervalo correcatmente');
     end
     disp(fx1*fxu > 0);
-    if(fx1*fxu > 0)
+    if(fx1*fxu >= 0)
         error('Intervalo:sin_raiz', ...
             'No existe raíz en el intervalo');
     end
